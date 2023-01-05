@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{{ config.title }}{% endblock title %}</title>
+	<link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+
+	<!-- For fonts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/18aa21ed87.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-main">
+		<a class="navbar-brand" href="{{ get_url(path="/", lang=lang) }}">{{  trans(key="name", lang=lang) }}</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content"
+			aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbar-content">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="{{ get_url(path="/", lang=lang) }}"
+						data-target="#hero"><span>{{ trans(key="home", lang=lang)  }}</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="{{ get_url(path="/team/") }}"
+						data-target="#publications"><span>{{ trans(key="team", lang=lang) }}</span></a></li>
+			</ul>
+		</div>
+	</nav> 
+	<main class="content">
+		{% block content %}
+		{% endblock content %}
+	</main>
+
+	<!-- Imported from hugo-academics -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+	{% block scripts %}
+	<!-- To include additional script -->
+	{% endblock scripts %}
+</body>
+
+</html>
