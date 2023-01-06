@@ -21,5 +21,22 @@
 {% endmacro authors_with_link %}
 
 {% macro remove_lang_path(path) %}
-    {{ path | split(pat="/") | slice(start=2) | join(sep="/") | trim | safe }}
+    {{ path | replace(from="en/", to="") | trim | safe }}
 {% endmacro remove_lang_path %}
+
+{% macro list_student(students) %}
+    {% set nstudents = students | length %}
+    <div class="columns">
+    {% for i in range(end=3) %}
+        {% if i < nstudents %}
+        <div class="column is-4">
+            <ul class="block-list is-small is-outlined is-centered">
+            {% for j in range(start=i, step_by=3, end=nstudents) %}
+                <li>{{ students[j].name }} </li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endmacro list_student %}

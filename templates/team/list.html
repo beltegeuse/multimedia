@@ -51,34 +51,23 @@
 
             <!-- Phd students -->
             <h3>{{ section.extra.phd }} </h3>
-            <ul>
-                {% for student in students_current | filter(attribute="type", value="phd") %}
-                <li>{{ student.name }} </li>
-                {% endfor %}
-            </ul>
-
+            {% set students = students_current | filter(attribute="type", value="phd") %}
+            {{ macros::list_student(students=students) }}
+            
             <!-- Master students -->
             <h3>{{ section.extra.master }} </h3>
-            <ul>
-                {% for student in students_current | filter(attribute="type", value="master") %}
-                <li>{{ student.name }} </li>
-                {% endfor %}
-            </ul>
+            {% set students = students_current | filter(attribute="type", value="master") %}
+            {{ macros::list_student(students=students) }}
 
             <!-- Intern students -->
             <h3>{{ section.extra.intern }} </h3>
-            <ul>
-                {% for student in students_current | filter(attribute="type", value="intern") %}
-                <li>{{ student.name }} </li>
-                {% endfor %}
-            </ul>
+            {% set students = students_current | filter(attribute="type", value="intern") %}
+            {{ macros::list_student(students=students) }}
 
             <h2> Aluminati </h2>
-            <ul>
-                {% for student in students_past %}
-                <li>{{ student.name }}</li>
-                {% endfor %}
-            </ul>
+            {% set students = students_past %}
+            {{ macros::list_student(students=students) }}
+            
         </div>
     </div>
 </section>

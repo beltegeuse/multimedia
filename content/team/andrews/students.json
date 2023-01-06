@@ -1,0 +1,31 @@
+{
+    "current" : [
+        {
+            "name": "Quoc-Minh Ton-That",
+            "type": "phd"
+        },
+        {
+            "name": "Andreas Enzenhoefer",
+            "type": "phd"
+        },
+        {
+            "name": "Hossein Feizollah Zadeh Khoiee",
+            "type": "phd"
+        },
+        {
+            "name": "Pranav Agarwal",
+            "type": "master"
+        },
+        {
+            "name": "Yunhao Luo",
+            "type": "master"
+        },
+        {
+            "name": "Juliette Seminaro",
+            "type": "master"
+        }
+    ],
+    "past" : [
+
+    ]
+}

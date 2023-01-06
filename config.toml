@@ -21,8 +21,10 @@ paths = "off"
 name = "Laboratoire Multimedia"
 home = "Accueil"
 team = "Équipe"
+seminar = "Séminaire"
 
 [languages.en.translations]
 name = "Multimedia Laboratory"
 home = "Home"
 team = "Team"
+seminar = "Seminar"

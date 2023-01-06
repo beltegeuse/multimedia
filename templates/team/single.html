@@ -2,23 +2,52 @@
 
 {% block content %}
 <section class="section">
-	<div class="container">
+	<div class="container">	
 		<div class="columns">
-			<div class="column is-8 is-offset-2">
+			<div class="column is-4">
+				<div class="card">
+					<div class="card-image">
+					  <figure class="image is-4by3">
+						{% set p = macros::remove_lang_path(path=current_path) | trim %}
+						{% set image = resize_image(path=p ~ 'img.jpg', width=400, height=300, op='fill') %}
+						<img src=" {{ image.url }} " alt="Placeholder image">
+					  </figure>
+					</div>
+
+					<div class="card-content">
+						<div class="content">
+							<h3 class="">{{ page.extra.name }}</h3> 
+							{{ page.extra.title }}
+							<br>
+							{{ page.extra.departement }}
+							<br>
+							<strong>Website:</strong> <a href="{{ page.extra.website }}">{{ page.extra.website }} </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column is-8">
 				<div class="content" style="text-align: justify">
 					<p>{{ page.content |  markdown(inline=true) | safe }}</p>
 				</div>
-			</div>
-		</div>
-		
-		<div class="content">
-			{{ page.path ~ "papers.bib" }}
-			{#
+
 				{% set pubs = load_data(path=page.path ~ "papers.bib", format="bibtex", required=false) %}
 				{% if pubs %}
-					{{ pubs | json_encode() }}
+					<div class="content">
+						<h3>Publications</h3>
+						{% for p in pubs.bibliographies | sort(attribute="tags.year") | reverse %}
+						{{ p.tags.author }}. {{p.tags.year }}. <em>"{{ p.tags.title }}"</em> 
+						{% if p.tags.journal %}
+							{{ p.tags.journal }}.
+						{% endif %}
+						{% if p.tags.booktitle %}
+							{{ p.tags.booktitle }}. 
+						{% endif %}
+						<br><br>
+						{% endfor  %}
+					</div>
 				{% endif %}
-			#}
+			</div>
 		</div>
 	
 	</div>
