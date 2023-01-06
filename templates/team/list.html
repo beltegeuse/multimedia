@@ -1,73 +1,85 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section id="other" class="home-section">
-		<div class="container">
-			<div class="row">
-                
-                {% for team in section.pages | sort(attribute="extra.name")  %}
-				<div class="col-xs-6 col-md-6">
-                    {% set image = resize_image(path=team.path  ~ 'img.jpg', width=500, height=300, op='fill') %}
-                    <img src="{{ image.url }}" />
-					<p><a href="{{ team.extra.website }}"> {{ team.extra.name }} </a>
-                    <br>
-                    {{ team.extra.title }}
-                    <br>
-                    {{ team.extra.departement }}</p>
-				</div>
-                {% endfor %}
-			</div>
-  
-            <div class="row">
-                <div class="col-xs-12 col-md-12">
-                    <h2>{{ section.extra.students }} </h2>
-                    {% set_global students_current = [] %}
-                    {% set_global students_past = [] %}
-                    
-                    {% for team in section.pages %}
-                        {% set data = load_data(path=team.path ~ "students.json", format="json", required=false) %}
-                        {% if data %}
-                            {% set_global students_current = data.current | concat(with=students_current) %}
-                            {% set_global students_past = data.past | concat(with=students_past) %}
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h2>{{ section.extra.prof }}</h2>
+        </div>
+        <div class="columns is-multiline">
+
+            {% for prof in section.pages | sort(attribute="extra.name") %}
+            <div class="column is-4">
+                <div class="content">
+                    {% set image = resize_image(path=prof.path ~ 'img.jpg', width=500, height=300, op='fill') %}
+                    <img src="{{ image.url }}" style="border: 1px solid black;" />
+                    <p><a href="{{ prof.extra.website }}"> {{ prof.extra.name }} </a>
+                        <br>
+                        {{ prof.extra.title }}
+                        <br>
+                        {{ prof.extra.departement }}
+                        <br>
+                        {% if prof.extra.specialities %}
+                        <div class="tags is-small">
+                            {% for s in prof.extra.specialities %}
+                            <span class="tag">{{ s }}</span>
+                            {% endfor %}
+                        </div>
                         {% endif %}
-                    {% endfor %}
-                    
-                    {% set_global students_current = students_current | sort(attribute="name") %}
-                    {% set_global students_past = students_past | sort(attribute="name") %}
-
-                    <!-- Phd students -->
-                    <h3>{{ section.extra.phd }} </h3>
-                    <ul>
-                        {% for student in students_current | filter(attribute="type", value="phd") %}
-                        <li>{{ student.name }}  </li>
-                        {% endfor %}
-                    </ul>
-                    
-                    <!-- Master students -->
-                    <h3>{{ section.extra.master }} </h3>
-                    <ul>
-                        {% for student in students_current | filter(attribute="type", value="master") %}
-                        <li>{{ student.name }}  </li>
-                        {% endfor %}
-                    </ul>
-
-                    <!-- Intern students -->
-                    <h3>{{ section.extra.intern }} </h3>
-                    <ul>
-                        {% for student in students_current | filter(attribute="type", value="intern") %}
-                        <li>{{ student.name }}  </li>
-                        {% endfor %}
-                    </ul>
-                    
-                    <h2> Aluminati </h2>
-                    <ul>
-                    {% for student in students_past %}
-                        <li>{{ student.name }}</li>
-                    {% endfor %}
-                    </ul>
-                    
+                    </p>
                 </div>
             </div>
+            {% endfor %}
         </div>
-	</section>
+
+    
+        <div class="content">
+            <h2>{{ section.extra.students }} </h2>
+            {% set_global students_current = [] %}
+            {% set_global students_past = [] %}
+
+            {% for team in section.pages %}
+            {% set data = load_data(path=team.path ~ "students.json", format="json", required=false) %}
+            {% if data %}
+            {% set_global students_current = data.current | concat(with=students_current) %}
+            {% set_global students_past = data.past | concat(with=students_past) %}
+            {% endif %}
+            {% endfor %}
+
+            {% set_global students_current = students_current | sort(attribute="name") %}
+            {% set_global students_past = students_past | sort(attribute="name") %}
+
+            <!-- Phd students -->
+            <h3>{{ section.extra.phd }} </h3>
+            <ul>
+                {% for student in students_current | filter(attribute="type", value="phd") %}
+                <li>{{ student.name }} </li>
+                {% endfor %}
+            </ul>
+
+            <!-- Master students -->
+            <h3>{{ section.extra.master }} </h3>
+            <ul>
+                {% for student in students_current | filter(attribute="type", value="master") %}
+                <li>{{ student.name }} </li>
+                {% endfor %}
+            </ul>
+
+            <!-- Intern students -->
+            <h3>{{ section.extra.intern }} </h3>
+            <ul>
+                {% for student in students_current | filter(attribute="type", value="intern") %}
+                <li>{{ student.name }} </li>
+                {% endfor %}
+            </ul>
+
+            <h2> Aluminati </h2>
+            <ul>
+                {% for student in students_past %}
+                <li>{{ student.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
 {% endblock content %}

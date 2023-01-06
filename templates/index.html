@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section id="other" class="home-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-12">
-					<center><img src="{{ get_url(path='img/banner.' ~ lang ~ '.jpg') }}" /></center>
-				</div>
+<section class="hero is-small is-primary">
+	<div class="hero-body">
+		<center><img src="{{ get_url(path='img/banner.' ~ lang ~ '.jpg') }}" /></center>
+	</div>
+</section>
 
-				<div class="col-xs-12 col-md-12">
-					<p></p>
-				</div>
-
-				<div class="col-xs-12 col-md-12" style="text-align: justify">
-					{{ section.content |  markdown(inline=true) | safe }}
-				</div>
+<section class="section">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-8 is-offset-2">
+			<div class="content" style="text-align: justify">
+				<p>{{ section.content |  markdown(inline=true) | safe }}</p>
 			</div>
 		</div>
-	</section>
+		</div>
+	</div>
+</section>
 {% endblock content %}

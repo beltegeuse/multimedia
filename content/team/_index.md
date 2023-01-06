@@ -7,5 +7,6 @@ students = "Étudiants"
 phd = "Doctorat"
 master = "Maitrise"
 intern = "Stage"
+prof = "Professeurs"
 
 +++
