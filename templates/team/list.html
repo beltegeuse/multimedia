@@ -13,7 +13,7 @@
                 <div class="content">
                     {% set image = resize_image(path=prof.path ~ 'img.jpg', width=500, height=300, op='fill') %}
                     <img src="{{ image.url }}" style="border: 1px solid black;" />
-                    <p><a href="{{ prof.extra.website }}"> {{ prof.extra.name }} </a>
+                    <p><a href="{{ prof.permalink }}"> {{ prof.extra.name }} </a>
                         <br>
                         {{ prof.extra.title }}
                         <br>
@@ -39,11 +39,11 @@
             {% set_global students_past = [] %}
 
             {% for team in section.pages %}
-            {% set data = load_data(path=team.path ~ "students.json", format="json", required=false) %}
-            {% if data %}
-            {% set_global students_current = data.current | concat(with=students_current) %}
-            {% set_global students_past = data.past | concat(with=students_past) %}
-            {% endif %}
+                {% set data = load_data(path=team.path ~ "students.json", format="json", required=false) %}
+                {% if data %}
+                {% set_global students_current = data.current | concat(with=students_current) %}
+                {% set_global students_past = data.past | concat(with=students_past) %}
+                {% endif %}
             {% endfor %}
 
             {% set_global students_current = students_current | sort(attribute="name") %}

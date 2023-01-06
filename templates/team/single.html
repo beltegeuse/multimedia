@@ -1,13 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section id="other" class="home-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-12">
-					{{ page.content | markdown(inline=true) | safe }}
+<section class="section">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-8 is-offset-2">
+				<div class="content" style="text-align: justify">
+					<p>{{ page.content |  markdown(inline=true) | safe }}</p>
 				</div>
 			</div>
 		</div>
-	</section>
+		
+		<div class="content">
+			{{ page.path ~ "papers.bib" }}
+			{#
+				{% set pubs = load_data(path=page.path ~ "papers.bib", format="bibtex", required=false) %}
+				{% if pubs %}
+					{{ pubs | json_encode() }}
+				{% endif %}
+			#}
+		</div>
+	
+	</div>
+</section>
 {% endblock content %}
