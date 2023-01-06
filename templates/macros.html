@@ -19,3 +19,7 @@
         {{ final }}{{ macros::one_author_with_link(author=authors | last , websites=websites) | trim | safe }}
     {% endif %}
 {% endmacro authors_with_link %}
+
+{% macro remove_lang_path(path) %}
+    {{ path | split(pat="/") | slice(start=2) | join(sep="/") | trim | safe }}
+{% endmacro remove_lang_path %}

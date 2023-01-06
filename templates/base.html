@@ -1,3 +1,5 @@
+{% import "macros.html" as macros %}
+
 <!DOCTYPE html>
 <html>
 
@@ -34,6 +36,46 @@
 				<a class="navbar-item"   href="{{ get_url(path="/team/", lang=lang) }}">
 					{{ trans(key="team", lang=lang) }}
 				</a>
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item has-dropdown is-hoverable lang-dropdown">
+				<a class="navbar-link is-arrowless is-hidden-mobile">
+					{% if lang == "fr" %}
+					<img src="{{ get_url(path='/img/qc.png') }}" alt="">
+					{% endif %}
+					{% if lang == "en" %}
+					<img src="https://cdn0.iconfinder.com/data/icons/all-national-flags-of-the-world-very-high-quality-/283/usa-512.png" alt="">
+					{% endif %}
+					
+				</a>
+		
+				<div class="navbar-dropdown is-boxed is-right">
+					<a class="navbar-item" href="{{ get_url(path=current_path, lang='en') }}">
+					<img src="https://cdn0.iconfinder.com/data/icons/all-national-flags-of-the-world-very-high-quality-/283/usa-512.png" alt="">
+					<span>
+						{% if lang == "en" %}
+						English
+						{% endif %} 
+						{% if lang == "fr" %}
+						Anglais
+						{% endif %} 
+					</span>
+					</a>
+					{% set p = macros::remove_lang_path(path=current_path) | trim %}
+					<a class="navbar-item" href="{{ get_url(path=p, lang='fr') }}">
+					<img src="{{ get_url(path='/img/qc.png') }}" alt="">
+					<span>
+						{% if lang == "en" %}
+						French
+						{% endif %} 
+						{% if lang == "fr" %}
+						Français
+						{% endif %} 
+					</span>
+					</a>
+				</div>
+				</div>
 			</div>
 		</div>
 	</nav>
