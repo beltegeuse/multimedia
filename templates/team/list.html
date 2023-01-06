@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="row">
                 
-                {% for team in section.pages %}
+                {% for team in section.pages | sort(attribute="extra.name")  %}
 				<div class="col-xs-6 col-md-6">
                     {% set image = resize_image(path=team.path  ~ 'img.jpg', width=500, height=300, op='fill') %}
                     <img src="{{ image.url }}" />
@@ -32,6 +32,9 @@
                         {% endif %}
                     {% endfor %}
                     
+                    {% set_global students_current = students_current | sort(attribute="name") %}
+                    {% set_global students_past = students_past | sort(attribute="name") %}
+
                     <!-- Phd students -->
                     <h3>{{ section.extra.phd }} </h3>
                     <ul>
