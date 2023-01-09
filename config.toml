@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://profs.etsmtl.ca/agruson/"
+base_url = "https://profs.etsmtl.ca/agruson/multimedia"
 title = "Laboratoire Multimedia"
 
 # Whether to automatically compile all Sass files in the sass directory
