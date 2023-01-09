@@ -26,4 +26,3 @@ Each professor's directory is inside `content/team/<prof-name>`. This directory 
 - `papers.bib` (optional): The list of published papers in BibTeX format. This file can be generated automatically by Google scholar (i.e., go to your google scholar profile, select all your publications and click on export). 
 
 If you want to include some images, you can add them directly inside your own directory or inside `static/img`. 
-
