@@ -1,11 +1,41 @@
 {
-    "current" : [
+    "current": [
+        {
+            "name": "Andrey Titov",
+            "type": "phd"
+        },
+        {
+            "name": "Gelel Rezig",
+            "type": "master"
+        },
         {
             "name": "Samuelle St-Onge",
-            "type": "intern"
+            "type": "master"
+        },
+        {
+            "name": "Guillaume Marie",
+            "type": "master"
+        },
+        {
+            "name": "Tina Nantenaina",
+            "type": "master"
+        },
+        {
+            "name": "Alejandro Olivares Hernandez",
+            "type": "master"
+        },
+        {
+            "name": "Léa Vong",
+            "type": "master"
+        },
+        {
+            "name": "Sawsane Aloui ",
+            "type": "master"
+        },
+        {
+            "name": "Naomi Catwell",
+            "type": "other"
         }
     ],
-    "past" : [
-
-    ]
+    "past": []
 }

@@ -1,31 +1,33 @@
 {
-    "current" : [
+    "current": [
+        {
+            "name": "Yinchu Liu",
+            "type": "other"
+        },
         {
             "name": "Quoc-Minh Ton-That",
-            "type": "phd"
-        },
-        {
-            "name": "Andreas Enzenhoefer",
-            "type": "phd"
-        },
-        {
-            "name": "Hossein Feizollah Zadeh Khoiee",
-            "type": "phd"
+            "type": "other"
         },
         {
             "name": "Pranav Agarwal",
-            "type": "master"
+            "type": "other"
         },
         {
-            "name": "Yunhao Luo",
-            "type": "master"
+            "name": "Loïc Nassif",
+            "type": "other"
         },
         {
-            "name": "Juliette Seminaro",
-            "type": "master"
+            "name": "Daniel Milenov Milanov",
+            "type": "other"
+        },
+        {
+            "name": "Joël Pelletier-Guénette",
+            "type": "other"
+        },
+        {
+            "name": "Omar Zoubir",
+            "type": "other"
         }
     ],
-    "past" : [
-
-    ]
+    "past": []
 }

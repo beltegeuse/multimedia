@@ -11,7 +11,13 @@ def get_all_pubs(id):
 
     # Retrieve all the details for the author
     author = scholarly.fill(first_author_result )
-    
+
+    first_publication = author['publications'][0]
+    first_publication_filled = scholarly.fill(first_publication)
+    for (k, v) in first_publication_filled.items():
+        print(f" - {k} : {v}")
+
+
     pubs = [pub['bib'] for pub in author['publications']]
     return pubs
 
@@ -22,14 +28,16 @@ if __name__=="__main__":
     parser.add_argument("--output", help="output bib file", default="")
     args = parser.parse_args()
     
-    pg = ProxyGenerator()
-    success = pg.FreeProxies()
-    scholarly.use_proxy(pg)
+    # Do not works....
+    # pg = ProxyGenerator()
+    # success = pg.FreeProxies()
+    # scholarly.use_proxy(pg)
     
     pubs = get_all_pubs(args.id)
     print("Titles:")
     for pub in pubs:
         print(" - ", pub)
+
 
     if args.output != "":
         f = open(args.output, "w")

@@ -59,14 +59,15 @@
             {% set students = students_current | filter(attribute="type", value="master") %}
             {{ macros::list_student(students=students) }}
 
-            <!-- Intern students -->
+            <!-- Intern or other students -->
             <h3>{{ section.extra.intern }} </h3>
-            {% set students = students_current | filter(attribute="type", value="intern") %}
+            {% set students = students_current | filter(attribute="type", value="other") %}
             {{ macros::list_student(students=students) }}
 
-            <h2> Aluminati </h2>
+            <!-- <h2> Aluminati </h2>
             {% set students = students_past %}
             {{ macros::list_student(students=students) }}
+            -->
             
         </div>
     </div>

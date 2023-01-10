@@ -7,7 +7,7 @@ template = "team/list.html"
 students = "Students"
 phd = "Doctorate"
 master = "Master"
-intern = "Intern"
+intern = "Other status (1st year, intern, visitor, ...)"
 prof = "Professors"
 
 +++
