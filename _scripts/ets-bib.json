@@ -1,0 +1,40 @@
+{
+    "profs" : [
+        {
+            "url"  : "https://espace2.etsmtl.ca/cgi/search/archive/simple/export_eprints_etsmtl2_BibTeX.bib?screen=Search&dataset=archive&_action_export=1&output=BibTeX&exp=0%7C1%7C-date%2Fcreators_name%2Ftitle%7Carchive%7C-%7Cq%3A%3AALL%3AIN%3Aadrien+gruson%7C-%7C&n=&cache=",
+            "file" : "../content/team/gruson/papers.bib" 
+        },
+        {
+            "url"  : "https://espace2.etsmtl.ca/cgi/search/archive/simple/export_eprints_etsmtl2_BibTeX.bib?screen=Search&dataset=archive&_action_export=1&output=BibTeX&exp=0%7C1%7C-date%2Fcreators_name%2Ftitle%7Carchive%7C-%7Cq%3A%3AALL%3AIN%3ASheldon+Andrews%7C-%7C&n=&cache=",
+            "file" : "../content/team/andrews/papers.bib" 
+        },
+        {
+            "url"  : "https://espace2.etsmtl.ca/cgi/search/archive/simple/export_eprints_etsmtl2_BibTeX.bib?screen=Search&dataset=archive&_action_export=1&output=BibTeX&exp=0%7C1%7C-date%2Fcreators_name%2Ftitle%7Carchive%7C-%7Cq%3A%3AALL%3AIN%3ASt%C3%A9phane+Coulombe%7C-%7C&n=&cache=",
+            "file" : "../content/team/coulombe/papers.bib"  
+        },
+        {
+            "url"  : "https://espace2.etsmtl.ca/cgi/search/archive/simple/export_eprints_etsmtl2_BibTeX.bib?screen=Search&dataset=archive&_action_export=1&output=BibTeX&exp=0%7C1%7C-date%2Fcreators_name%2Ftitle%7Carchive%7C-%7Cq%3A%3AALL%3AIN%3ASimon+Drouin%7C-%7C&n=&cache=",
+            "file" : "../content/team/drouin/papers.bib"  
+        },
+        {
+            "url"  : "https://espace2.etsmtl.ca/cgi/search/archive/simple/export_eprints_etsmtl2_BibTeX.bib?screen=Search&dataset=archive&_action_export=1&output=BibTeX&exp=0%7C1%7C-date%2Fcreators_name%2Ftitle%7Carchive%7C-%7Cq%3A%3AALL%3AIN%3ALuc+Duong%7C-%7C&n=&cache=",
+            "file" : "../content/team/duong/papers.bib"  
+        },
+        {
+            "url"  : "https://espace2.etsmtl.ca/cgi/search/archive/advanced/export_eprints_etsmtl2_BibTeX.bib?screen=Search&dataset=archive&_action_export=1&output=BibTeX&exp=0%7C1%7C-date%2Fmaster_director_name%2Ftitle%7Carchive%7C-%7Cmaster_director_name%3Amaster_director_name%3AALL%3AEQ%3ADavid+Labb%C3%A9%7C-%7Ceprint_status%3Aeprint_status%3AANY%3AEQ%3Aarchive%7Cmetadata_visibility%3Ametadata_visibility%3AANY%3AEQ%3Ashow&n=&cache=392598",
+            "file" : "../content/team/labbe/papers.bib"  
+        },
+        {
+            "url"  : "https://espace2.etsmtl.ca/cgi/search/archive/simple/export_eprints_etsmtl2_BibTeX.bib?screen=Search&dataset=archive&_action_export=1&output=BibTeX&exp=0%7C1%7C-date%2Fcreators_name%2Ftitle%7Carchive%7C-%7Cq%3A%3AALL%3AIN%3AMcGuffin%2C+Michael+John%7C-%7C&n=&cache=",
+            "file" : "../content/team/mcguffin/papers.bib"  
+        },
+        {
+            "url"  : "https://espace2.etsmtl.ca/cgi/search/archive/simple/export_eprints_etsmtl2_BibTeX.bib?screen=Search&dataset=archive&_action_export=1&output=BibTeX&exp=0%7C1%7C-date%2Fcreators_name%2Ftitle%7Carchive%7C-%7Cq%3A%3AALL%3AIN%3AEric+Paquette%7C-%7C&n=&cache=",
+            "file" : "../content/team/paquette/papers.bib"  
+        },
+        {
+            "url"  : "https://espace2.etsmtl.ca/cgi/search/archive/simple/export_eprints_etsmtl2_BibTeX.bib?screen=Search&dataset=archive&_action_export=1&output=BibTeX&exp=0%7C1%7C-date%2Fcreators_name%2Ftitle%7Carchive%7C-%7Cq%3A%3AALL%3AIN%3AV%C3%A1zquez%2C+Carlos%7C-%7C&n=&cache=",
+            "file" : "../content/team/vasquez/papers.bib"  
+        }
+    ]
+}

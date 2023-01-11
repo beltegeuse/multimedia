@@ -9,5 +9,6 @@ phd = "Doctorate"
 master = "Master"
 intern = "Other status (1st year, intern, visitor, ...)"
 prof = "Professors"
+employee = "Post-docs and research assistants"
 
 +++

@@ -7,19 +7,19 @@
              doi = {10.1109/ACCESS.2022.3155457},
          journal = {IEEE Access},
              url = {https://doi.org/10.1109/ACCESS.2022.3155457},
-        abstract = {In this paper, we propose a new approach to perform multiple error correction in wireless
-communications over error-prone networks. It is based on the cyclic redundancy check syndrome, using an
-optimized lookup table that avoids performing arithmetic operations. This method is able to achieve the same
-correction performance as the state-of-the-art approaches while significantly reducing the computational
-complexity. The table is designed to allow multiple bit error correction simply by navigating within it. Its
-size is constant when considering more than two errors, which represents a tremendous advantage over
-earlier lookup table-based approaches. Simulation results of a C implementation performed on a Raspberry
-Pi 4 show that the proposed method is able to process single and double error corrections of large payloads in
-100 ns and 642 {\ensuremath{\mu}}s, respectively, while it would take 300 {\ensuremath{\mu}}s and 1.5 s, respectively, with the state-of-the-art
-CRC multiple error correction technique. This represents a speedup of nearly 3000{$\times$}{$\times$}{$\times$} for single error and
-2300{$\times$}{$\times$}{$\times$} for double error correction, respectively. Compared to table-based approaches, the proposed method
-offers a speedup of nearly 1200{$\times$}{$\times$}{$\times$} for single error and 2300{$\times$}{$\times$}{$\times$} for double error correction under the same
-conditions. We also show that when multiple candidate error patterns are present, numerous errors can be
+        abstract = {In this paper, we propose a new approach to perform multiple error correction in wireless
+communications over error-prone networks. It is based on the cyclic redundancy check syndrome, using an
+optimized lookup table that avoids performing arithmetic operations. This method is able to achieve the same
+correction performance as the state-of-the-art approaches while significantly reducing the computational
+complexity. The table is designed to allow multiple bit error correction simply by navigating within it. Its
+size is constant when considering more than two errors, which represents a tremendous advantage over
+earlier lookup table-based approaches. Simulation results of a C implementation performed on a Raspberry
+Pi 4 show that the proposed method is able to process single and double error corrections of large payloads in
+100 ns and 642 {\ensuremath{\mu}}s, respectively, while it would take 300 {\ensuremath{\mu}}s and 1.5 s, respectively, with the state-of-the-art
+CRC multiple error correction technique. This represents a speedup of nearly 3000{$\times$}{$\times$}{$\times$} for single error and
+2300{$\times$}{$\times$}{$\times$} for double error correction, respectively. Compared to table-based approaches, the proposed method
+offers a speedup of nearly 1200{$\times$}{$\times$}{$\times$} for single error and 2300{$\times$}{$\times$}{$\times$} for double error correction under the same
+conditions. We also show that when multiple candidate error patterns are present, numerous errors can be
 corrected by adding a checksum cross-validation step.},
           author = {Boussard, Vivien and Coulombe, St{\'e}phane and Coudoux, Fran{\cc}ois-Xavier and Corlay, Patrick}
 }
@@ -44,24 +44,24 @@ corrected by adding a checksum cross-validation step.},
              doi = {10.1109/ACCESS.2022.3167446},
          journal = {IEEE Access},
              url = {https://doi.org/10.1109/ACCESS.2022.3167446},
-        abstract = {The rapid growth of video consumption and multimedia applications has increased the interest
-of the academia and industry in building tools that can evaluate perceptual video quality. Since videos
-might be distorted when they are captured or transmitted, it is imperative to develop reliable methods
-for no-reference video quality assessment (NR-VQA). To date, most NR-VQA models in prior art have
-been proposed for assessing a specific category of distortion, such as authentic distortions or traditional
-distortions. Moreover, those developed for both authentic and traditional distortions video databases have
-so far led to poor performances. This resulted in the reluctance of service providers to adopt multiple
-NR-VQA approaches, as they prefer a single algorithm capable of accurately estimating video quality in
-all situations. Furthermore, many existing NR-VQA methods are computationally complex and therefore
-impractical for various real-life applications. In this paper, we propose a novel deep learning method for
-NR-VQA based on multi-task learning where the distortion of individual frames in a video and the overall
-quality of the video are predicted by a single neural network. This enables to train the network with a greater
-amount and variety of data, thereby improving its performance in testing. Additionally, our method leverages
-temporal attention to select the frames of a video sequence which contribute the most to its perceived quality.
-The proposed algorithm is evaluated on five publicly-available video quality assessment (VQA) databases
-containing traditional and authentic distortions. Results show that our method outperforms the state-of-the-
-art on traditional distortion databases such as LIVE VQA and CSIQ video, while also delivering competitive
-performance on databases containing authentic distortions such as KoNViD-1k, LIVE-Qualcomm and
+        abstract = {The rapid growth of video consumption and multimedia applications has increased the interest
+of the academia and industry in building tools that can evaluate perceptual video quality. Since videos
+might be distorted when they are captured or transmitted, it is imperative to develop reliable methods
+for no-reference video quality assessment (NR-VQA). To date, most NR-VQA models in prior art have
+been proposed for assessing a specific category of distortion, such as authentic distortions or traditional
+distortions. Moreover, those developed for both authentic and traditional distortions video databases have
+so far led to poor performances. This resulted in the reluctance of service providers to adopt multiple
+NR-VQA approaches, as they prefer a single algorithm capable of accurately estimating video quality in
+all situations. Furthermore, many existing NR-VQA methods are computationally complex and therefore
+impractical for various real-life applications. In this paper, we propose a novel deep learning method for
+NR-VQA based on multi-task learning where the distortion of individual frames in a video and the overall
+quality of the video are predicted by a single neural network. This enables to train the network with a greater
+amount and variety of data, thereby improving its performance in testing. Additionally, our method leverages
+temporal attention to select the frames of a video sequence which contribute the most to its perceived quality.
+The proposed algorithm is evaluated on five publicly-available video quality assessment (VQA) databases
+containing traditional and authentic distortions. Results show that our method outperforms the state-of-the-
+art on traditional distortion databases such as LIVE VQA and CSIQ video, while also delivering competitive
+performance on databases containing authentic distortions such as KoNViD-1k, LIVE-Qualcomm and
 CVD2014.},
           author = {Kossi, Koffi and Coulombe, St{\'e}phane and Desrosiers, Christian and Gagnon, Ghyslain}
 }
@@ -112,7 +112,7 @@ CVD2014.},
              doi = {10.1016/j.image.2021.116475},
          journal = {Signal Processing: Image Communication},
              url = {https://dx.doi.org/10.1016/j.image.2021.116475},
-        abstract = {Cyclic redundancy checks (CRC) are widely used in transmission protocols to detect whether errors have altered a transmitted packet. It has been demonstrated in the literature that CRC can also be used to correct transmission errors. In this paper, we propose an improvement of the state-of-the-art CRC-based error correction method. The proposed approach is designed to significantly increase the error correction capabilities of the previous method, by handling a greater part of error cases through the management of candidate lists and using additional validations. Simulations and results for wireless video communications over 802.11p and Bluetooth Low Energy illustrate the Peak Signal-to-Noise Ratio (PSNR) and visual quality gains achieved with the proposed approach versus the state-of-the-art and traditional approaches. These gains range on average from 1.6 dB to 7.3 dB over Bluetooth Low Energy channels with Eb/No ratio of 10 dB and 8 dB, respectively.},
+        abstract = {Cyclic redundancy checks (CRC) are widely used in transmission protocols to detect whether errors have altered a transmitted packet. It has been demonstrated in the literature that CRC can also be used to correct transmission errors. In this paper, we propose an improvement of the state-of-the-art CRC-based error correction method. The proposed approach is designed to significantly increase the error correction capabilities of the previous method, by handling a greater part of error cases through the management of candidate lists and using additional validations. Simulations and results for wireless video communications over 802.11p and Bluetooth Low Energy illustrate the Peak Signal-to-Noise Ratio (PSNR) and visual quality gains achieved with the proposed approach versus the state-of-the-art and traditional approaches. These gains range on average from 1.6 dB to 7.3 dB over Bluetooth Low Energy channels with Eb/No ratio of 10 dB and 8 dB, respectively.},
           author = {Boussard, Vivien and Coulombe, St{\'e}phane and Coudoux, Fran{\cc}ois-Xavier and Corlay, Patrick}
 }
 
@@ -1843,3 +1843,4 @@ CVD2014.},
             isbn = {1520-6149},
           author = {Coulombe, St{\'e}phane and Dubois, Eric}
 }
+

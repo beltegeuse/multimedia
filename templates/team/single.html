@@ -36,14 +36,16 @@
 					<div class="content">
 						<h3>Publications</h3>
 						{% for p in pubs.bibliographies | sort(attribute="tags.year") | reverse %}
-						{{ p.tags.author }}. {{p.tags.year }}. <em>"{{ p.tags.title }}"</em> 
-						{% if p.tags.journal %}
-							{{ p.tags.journal }}.
-						{% endif %}
-						{% if p.tags.booktitle %}
-							{{ p.tags.booktitle }}. 
-						{% endif %}
-						<br><br>
+							{% if p.tags.author %}
+								{{ p.tags.author }}. {{p.tags.year }}. <em>"{{ p.tags.title }}"</em> 
+								{% if p.tags.journal %}
+									{{ p.tags.journal }}.
+								{% endif %}
+								{% if p.tags.booktitle %}
+									{{ p.tags.booktitle }}. 
+								{% endif %}
+								<br><br>
+							{% endif %}
 						{% endfor  %}
 					</div>
 				{% endif %}
